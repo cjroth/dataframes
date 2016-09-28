@@ -41,8 +41,8 @@ const df = DataFrame.of
 //
 // let b = v(1, 2, 3).sum()
 
-const fs = require('fs')
-let chris = JSON.parse(fs.readFileSync('../lifeslice/emotioncrunch/results/chris.json'))
+// const fs = require('fs')
+// let chris = JSON.parse(fs.readFileSync('../lifeslice/emotioncrunch/results/chris.json'))
 // .map(m => {
 //     return {
 //         valence: m.emotions.valence,
@@ -51,8 +51,8 @@ let chris = JSON.parse(fs.readFileSync('../lifeslice/emotioncrunch/results/chris
 //     }
 // })
 
-console.log(chris)
-
-let c = Vector.fromJSON(chris)
-
-console.log(c.column(0).mean())
+// console.log(chris)
+//
+// let c = Vector.fromJSON(chris)
+//
+// console.log(c.column(0).mean())
