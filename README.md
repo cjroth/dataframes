@@ -3,15 +3,20 @@
 Import:
 ```
 # old syntax
-const { Vector: v, DataFrame: df } = require('dataframes')
+const { Vector: v } = require('dataframes')
 
 # new syntax
-import { Vector as v, Dataframe as df } from 'dataframes'
+import { Vector as v } from 'dataframes'
+
+v = Vector.of
 ```
 
 Create a vector:
 ```
-let vector = v([1, 2, 3])
+let vector = new Vector(1, 2, 3)
+// Vector<1, 2, 3>
+
+let vector2 = v(1, 2, 3)
 // Vector<1, 2, 3>
 ```
 
@@ -32,11 +37,11 @@ vector['1:3']
 
 Create a matrix:
 ```
-let matrix = v([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-])
+let matrix = v(
+    v(1, 2, 3),
+    v(4, 5, 6),
+    v(7, 8, 9)
+)
 ```
 
 Get the shape of a vector or matrix:
