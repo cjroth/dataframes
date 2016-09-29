@@ -4,11 +4,18 @@ const DataFrame = require('./lib/DataFrame')
 const v = Vector.of
 const df = DataFrame.of
 
-// let df1 = df(
-//     v(1, 2, 3),
-//     v(4, 5, 6),
-//     v(7, 8, 9)
-// )
+
+let x = v(
+    v(1, 2, 3),
+    v(4, 5, 6),
+    v(7, 8, 9)
+)
+
+// console.log('dim', x.dimension, x[0].dimension)
+
+console.log(x[':2,:2'])
+// console.log(x[1][1])
+
 // // 1 2 3
 // // 4 5 6
 // // 7 8 9
